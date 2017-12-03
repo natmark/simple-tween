@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E765E0061FD3DF0300E42999 /* Tween.swift in Sources */ = {isa = PBXBuildFile; fileRef = E765E0051FD3DF0300E42999 /* Tween.swift */; };
 		E79EDD5E1FD22D530065AA03 /* simple_tween.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E79EDD541FD22D530065AA03 /* simple_tween.framework */; };
 		E79EDD631FD22D530065AA03 /* simple_tweenTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E79EDD621FD22D530065AA03 /* simple_tweenTests.swift */; };
 		E79EDD651FD22D530065AA03 /* simple_tween.h in Headers */ = {isa = PBXBuildFile; fileRef = E79EDD571FD22D530065AA03 /* simple_tween.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -23,6 +24,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		E765E0051FD3DF0300E42999 /* Tween.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tween.swift; sourceTree = "<group>"; };
 		E79EDD541FD22D530065AA03 /* simple_tween.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = simple_tween.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E79EDD571FD22D530065AA03 /* simple_tween.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = simple_tween.h; sourceTree = "<group>"; };
 		E79EDD581FD22D530065AA03 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -72,6 +74,7 @@
 			isa = PBXGroup;
 			children = (
 				E79EDD571FD22D530065AA03 /* simple_tween.h */,
+				E765E0051FD3DF0300E42999 /* Tween.swift */,
 				E79EDD581FD22D530065AA03 /* Info.plist */,
 			);
 			path = "simple-tween";
@@ -149,6 +152,7 @@
 				TargetAttributes = {
 					E79EDD531FD22D530065AA03 = {
 						CreatedOnToolsVersion = 9.1;
+						LastSwiftMigration = 0910;
 						ProvisioningStyle = Automatic;
 					};
 					E79EDD5C1FD22D530065AA03 = {
@@ -214,6 +218,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E765E0061FD3DF0300E42999 /* Tween.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -352,6 +357,7 @@
 		E79EDD691FD22D530065AA03 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
@@ -365,6 +371,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "io.github.natmark.simple-tween";
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -373,6 +380,7 @@
 		E79EDD6A1FD22D530065AA03 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
@@ -394,6 +402,7 @@
 		E79EDD6C1FD22D530065AA03 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = DEQGLB9PU4;
 				INFOPLIST_FILE = "simple-tweenTests/Info.plist";
@@ -408,6 +417,7 @@
 		E79EDD6D1FD22D530065AA03 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = DEQGLB9PU4;
 				INFOPLIST_FILE = "simple-tweenTests/Info.plist";
