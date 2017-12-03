@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		E765E0061FD3DF0300E42999 /* Tween.swift in Sources */ = {isa = PBXBuildFile; fileRef = E765E0051FD3DF0300E42999 /* Tween.swift */; };
+		E765E0471FD3F40500E42999 /* RxCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E765E0441FD3F40500E42999 /* RxCocoa.framework */; };
+		E765E0481FD3F40500E42999 /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E765E0451FD3F40500E42999 /* RxSwift.framework */; };
+		E765E0491FD3F40500E42999 /* RxBlocking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E765E0461FD3F40500E42999 /* RxBlocking.framework */; };
 		E79EDD5E1FD22D530065AA03 /* simple_tween.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E79EDD541FD22D530065AA03 /* simple_tween.framework */; };
 		E79EDD631FD22D530065AA03 /* simple_tweenTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E79EDD621FD22D530065AA03 /* simple_tweenTests.swift */; };
 		E79EDD651FD22D530065AA03 /* simple_tween.h in Headers */ = {isa = PBXBuildFile; fileRef = E79EDD571FD22D530065AA03 /* simple_tween.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -25,6 +28,9 @@
 
 /* Begin PBXFileReference section */
 		E765E0051FD3DF0300E42999 /* Tween.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tween.swift; sourceTree = "<group>"; };
+		E765E0441FD3F40500E42999 /* RxCocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxCocoa.framework; path = Carthage/Build/iOS/RxCocoa.framework; sourceTree = "<group>"; };
+		E765E0451FD3F40500E42999 /* RxSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxSwift.framework; path = Carthage/Build/iOS/RxSwift.framework; sourceTree = "<group>"; };
+		E765E0461FD3F40500E42999 /* RxBlocking.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxBlocking.framework; path = Carthage/Build/iOS/RxBlocking.framework; sourceTree = "<group>"; };
 		E79EDD541FD22D530065AA03 /* simple_tween.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = simple_tween.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E79EDD571FD22D530065AA03 /* simple_tween.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = simple_tween.h; sourceTree = "<group>"; };
 		E79EDD581FD22D530065AA03 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -38,6 +44,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E765E0471FD3F40500E42999 /* RxCocoa.framework in Frameworks */,
+				E765E0481FD3F40500E42999 /* RxSwift.framework in Frameworks */,
+				E765E0491FD3F40500E42999 /* RxBlocking.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -52,12 +61,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		E765E0431FD3F40500E42999 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E765E0461FD3F40500E42999 /* RxBlocking.framework */,
+				E765E0441FD3F40500E42999 /* RxCocoa.framework */,
+				E765E0451FD3F40500E42999 /* RxSwift.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		E79EDD4A1FD22D530065AA03 = {
 			isa = PBXGroup;
 			children = (
 				E79EDD561FD22D530065AA03 /* simple-tween */,
 				E79EDD611FD22D530065AA03 /* simple-tweenTests */,
 				E79EDD551FD22D530065AA03 /* Products */,
+				E765E0431FD3F40500E42999 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -112,6 +132,7 @@
 				E79EDD511FD22D530065AA03 /* Headers */,
 				E79EDD521FD22D530065AA03 /* Resources */,
 				E7ED78A71FD3DAC20089D71B /* [Swiftlint] Run Script */,
+				E765E0421FD3F3B800E42999 /* [Carthage] Run Script */,
 			);
 			buildRules = (
 			);
@@ -197,6 +218,23 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		E765E0421FD3F3B800E42999 /* [Carthage] Run Script */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/iOS/RxSwift.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/RxCocoa.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/RxBlocking.framework",
+			);
+			name = "[Carthage] Run Script";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/carthage copy-frameworks";
+		};
 		E7ED78A71FD3DAC20089D71B /* [Swiftlint] Run Script */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -365,6 +403,10 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = "simple-tween/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
@@ -389,6 +431,10 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = "simple-tween/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
