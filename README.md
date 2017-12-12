@@ -2,20 +2,20 @@
 Simple tween library for swift
 
 ## Usage
-```
+```Swift
 let tween = Tween(10) // Tweening during 10 sec
 tween.start() // Start tweening
 ```
 
 ### Check tween progress
-```
+```Swift
 if tween.isTweening {
   print(tween.position) // position 0.0~1.0
 }
 ```
 
 ### pause tweening
-```
+```Swift
 tween.pause() // Pause tweening
 tween.start() // Restart
 ```
